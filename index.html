@@ -4,648 +4,255 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akshay Joshi — Client Partner</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --navy: #0f1f3d;
-      --navy-mid: #1a3158;
-      --gold: #c9a84c;
-      --gold-light: #e8c97a;
-      --cream: #f8f5f0;
-      --slate: #475569;
-      --muted: #8494a8;
-      --white: #ffffff;
-      --border: rgba(201, 168, 76, 0.25);
+      --ink: #0d1b2a;
+      --ink-mid: #1b2e45;
+      --gold: #b8924a;
+      --gold-light: #d4ab6a;
+      --gold-pale: rgba(184,146,74,0.12);
+      --cream: #faf8f4;
+      --slate: #4a5568;
+      --muted: #8a97a8;
+      --border: rgba(184,146,74,0.2);
+      --card-bg: #ffffff;
+      --shadow: 0 4px 32px rgba(13,27,42,0.08);
+      --shadow-hover: 0 12px 48px rgba(13,27,42,0.14);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--navy);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1e4080 100%);
-      color: var(--white);
-      padding: 72px 5% 60px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -80px; right: -80px;
-      width: 420px; height: 420px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-light), transparent);
-    }
-
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
-    }
-
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(44px, 6vw, 68px);
-      font-weight: 600;
-      line-height: 1.05;
-      letter-spacing: -0.5px;
-      margin-bottom: 10px;
-    }
-
-    .hero-title {
-      font-size: 15px;
-      font-weight: 400;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 24px;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-bio {
-      font-size: 15px;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.85);
-      max-width: 640px;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 28px;
-    }
-
-    .tag {
-      padding: 5px 13px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      font-size: 12px;
-      color: var(--gold-light);
-      letter-spacing: 0.03em;
-    }
-
-    .hero-contact {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: flex-end;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .contact-item:hover { color: var(--gold-light); }
-
-    .contact-icon {
-      width: 32px; height: 32px;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-
-    /* ── MAIN LAYOUT ── */
-    .main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 60px 5%;
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 56px;
-    }
-
-    /* ── SECTION HEADERS ── */
-    .section { margin-bottom: 52px; }
-
-    .section-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 10.5px;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 28px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    /* ── EXPERIENCE ── */
-    .exp-item { margin-bottom: 36px; }
-
-    .exp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 4px;
-    }
-
-    .exp-role {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    .exp-date {
-      font-size: 12px;
-      color: var(--muted);
-      white-space: nowrap;
-      padding-top: 2px;
-    }
-
-    .exp-company {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .exp-bullets {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .exp-bullets li {
-      font-size: 13.5px;
-      color: var(--slate);
-      padding-left: 16px;
-      position: relative;
-      line-height: 1.6;
-    }
-
-    .exp-bullets li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 9px;
-      width: 5px; height: 5px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-
-    .exp-divider {
-      height: 1px;
-      background: linear-gradient(90deg, var(--border), transparent);
-      margin-bottom: 32px;
-    }
-
-    /* ── HIGHLIGHTS ── */
-    .highlights-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .highlight-card {
-      background: var(--white);
-      border: 1px solid rgba(0,0,0,0.07);
-      border-radius: 10px;
-      padding: 18px;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .highlight-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(15,31,61,0.1);
-    }
-
-    .highlight-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 3px; height: 100%;
-      background: var(--gold);
-    }
-
-    .highlight-stat {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    .highlight-desc {
-      font-size: 12px;
-      color: var(--slate);
-      line-height: 1.4;
-    }
-
-    /* ── SIDEBAR ── */
-    .sidebar-section { margin-bottom: 40px; }
-
-    .sidebar-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    /* Skills */
-    .skill-group { margin-bottom: 18px; }
-
-    .skill-group-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .skill-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .skill-chip {
-      background: var(--white);
-      border: 1px solid rgba(0,0,0,0.09);
-      border-radius: 4px;
-      padding: 4px 10px;
-      font-size: 12px;
-      color: var(--navy-mid);
-      transition: background 0.15s, border-color 0.15s;
-    }
-
-    .skill-chip:hover {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: var(--white);
-    }
-
-    /* Certifications */
+    body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    .topbar { height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light) 50%, transparent); }
+    .hero { background: var(--ink); padding: 64px 6% 72px; position: relative; overflow: hidden; }
+    .hero-bg-circle { position: absolute; border-radius: 50%; pointer-events: none; }
+    .hero-bg-circle.c1 { width: 500px; height: 500px; top: -180px; right: -120px; background: radial-gradient(circle, rgba(184,146,74,0.1) 0%, transparent 70%); }
+    .hero-bg-circle.c2 { width: 300px; height: 300px; bottom: -100px; left: 30%; background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%); }
+    .hero-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr; gap: 52px; align-items: center; position: relative; z-index: 1; }
+    .hero-photo-wrap { position: relative; flex-shrink: 0; }
+    .hero-photo-wrap::before { content: ''; position: absolute; inset: -6px; border-radius: 50%; background: conic-gradient(var(--gold) 0deg, var(--gold-light) 90deg, transparent 180deg, var(--gold) 360deg); animation: spin 8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .hero-photo-wrap::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; background: var(--ink); }
+    .hero-photo { width: 148px; height: 148px; border-radius: 50%; object-fit: cover; object-position: center top; display: block; position: relative; z-index: 1; }
+    .hero-text { color: #fff; }
+    .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
+    .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(40px, 5.5vw, 64px); font-weight: 600; line-height: 1.05; letter-spacing: -0.5px; margin-bottom: 6px; }
+    .hero-title { font-size: 14.5px; font-weight: 400; color: rgba(255,255,255,0.6); margin-bottom: 22px; }
+    .hero-bio { font-size: 14.5px; line-height: 1.8; color: rgba(255,255,255,0.8); max-width: 600px; margin-bottom: 28px; }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .pill { padding: 5px 14px; border: 1px solid rgba(184,146,74,0.35); border-radius: 20px; font-size: 11.5px; color: var(--gold-light); letter-spacing: 0.04em; }
+    .hero-contacts { display: flex; flex-wrap: wrap; gap: 16px; }
+    .hc-link { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s; }
+    .hc-link:hover { color: var(--gold-light); }
+    .hc-icon { width: 30px; height: 30px; border: 1px solid rgba(184,146,74,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
+    .stats-bar { background: var(--gold); padding: 0 6%; }
+    .stats-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat-item { padding: 22px 0; text-align: center; border-right: 1px solid rgba(255,255,255,0.25); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--ink); line-height: 1; }
+    .stat-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(13,27,42,0.65); margin-top: 4px; }
+    .main { max-width: 1080px; margin: 0 auto; padding: 60px 6%; display: grid; grid-template-columns: 1fr 300px; gap: 56px; }
+    .sec-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .sec-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600; color: var(--ink); margin-bottom: 32px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+    .exp-item { display: grid; grid-template-columns: 3px 1fr; gap: 0 20px; margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px dashed rgba(0,0,0,0.08); }
+    .exp-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .exp-line { background: linear-gradient(to bottom, var(--gold), transparent); border-radius: 3px; }
+    .exp-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 3px; }
+    .exp-role { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--ink); }
+    .exp-date { font-size: 11.5px; font-weight: 500; color: var(--muted); white-space: nowrap; background: rgba(0,0,0,0.04); padding: 3px 10px; border-radius: 20px; margin-top: 2px; }
+    .exp-company { font-size: 12.5px; font-weight: 600; color: var(--gold); letter-spacing: 0.04em; margin-bottom: 12px; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .exp-bullets li { font-size: 13.5px; color: var(--slate); padding-left: 15px; position: relative; line-height: 1.65; }
+    .exp-bullets li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0.7; }
+    .achieve-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .achieve-card { background: var(--card-bg); border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; padding: 20px 18px; position: relative; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; }
+    .achieve-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .achieve-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 0 0 12px 12px; }
+    .achieve-stat { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 5px; }
+    .achieve-desc { font-size: 12px; color: var(--slate); line-height: 1.5; }
+    .sidebar-sec { margin-bottom: 40px; }
+    .sb-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: var(--ink); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .skill-group { margin-bottom: 16px; }
+    .skill-group-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { background: var(--card-bg); border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; padding: 4px 11px; font-size: 12px; color: var(--ink-mid); transition: all 0.15s; cursor: default; }
+    .chip:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
     .cert-list { list-style: none; }
-
-    .cert-list li {
-      font-size: 13px;
-      color: var(--slate);
-      padding: 8px 0;
-      border-bottom: 1px dashed rgba(0,0,0,0.08);
-      padding-left: 14px;
-      position: relative;
-    }
-
-    .cert-list li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-size: 10px;
-      top: 9px;
-    }
-
-    /* Regions */
-    .region-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .region-pill {
-      background: var(--navy);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 5px 14px;
-      font-size: 12px;
-    }
-
-    /* Links */
-    .link-list { display: flex; flex-direction: column; gap: 10px; }
-
-    .link-btn {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      text-decoration: none;
-      color: var(--navy);
-      font-size: 13px;
-      font-weight: 500;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .link-btn:hover {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: var(--white);
-    }
-
-    .link-btn span { font-size: 16px; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.45);
-      text-align: center;
-      padding: 22px;
-      font-size: 12px;
-      letter-spacing: 0.05em;
-    }
-
-    footer a { color: var(--gold); text-decoration: none; }
-
-    /* ── RESPONSIVE ── */
+    .cert-list li { font-size: 12.5px; color: var(--slate); padding: 8px 0 8px 16px; border-bottom: 1px dashed rgba(0,0,0,0.07); position: relative; }
+    .cert-list li:last-child { border-bottom: none; }
+    .cert-list li::before { content: '◆'; position: absolute; left: 0; top: 9px; color: var(--gold); font-size: 7px; }
+    .regions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .region { background: var(--ink); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 12px; }
+    .link-list { display: flex; flex-direction: column; gap: 9px; }
+    .link-btn { display: flex; align-items: center; gap: 10px; padding: 11px 14px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: var(--ink); font-size: 13px; font-weight: 500; background: var(--card-bg); transition: all 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+    .link-btn:hover { background: var(--ink); border-color: var(--ink); color: #fff; transform: translateX(3px); }
+    footer { background: var(--ink); color: rgba(255,255,255,0.4); text-align: center; padding: 24px; font-size: 12px; letter-spacing: 0.05em; }
+    footer a { color: var(--gold-light); text-decoration: none; }
     @media (max-width: 860px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-contact { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-eyebrow { justify-content: center; }
+      .hero-pills, .hero-contacts { justify-content: center; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
       .main { grid-template-columns: 1fr; }
-      .highlights-grid { grid-template-columns: 1fr 1fr; }
+      .hero-photo-wrap { margin: 0 auto; }
     }
-
     @media (max-width: 520px) {
-      .highlights-grid { grid-template-columns: 1fr; }
-      .exp-header { flex-direction: column; }
+      .achieve-grid { grid-template-columns: 1fr; }
+      .exp-top { flex-direction: column; gap: 4px; }
     }
   </style>
 </head>
 <body>
-
-  <!-- ── HERO ── -->
-  <header class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-label">Client Partner · Technology Services</div>
-        <h1>Akshay Joshi</h1>
-        <p class="hero-title">Client Partner — Tata Consultancy Services &nbsp;|&nbsp; New York, USA</p>
-        <p class="hero-bio">
-          Strategic Client Partner with 17+ years of global experience driving Business Development, Digital Transformation, and CXO-level Relationship Management across BFSI, Hi-Tech, Utilities, CPG, and Media &amp; Entertainment. Known for leading multimillion-dollar portfolios, acquiring new logos, and steering large-scale enterprise transformation programs across North America, South Africa, and India.
-        </p>
-        <div class="hero-tags">
-          <span class="tag">CXO Engagement</span>
-          <span class="tag">Business Development</span>
-          <span class="tag">Strategic Outsourcing</span>
-          <span class="tag">Program Management</span>
-          <span class="tag">P&amp;L Ownership</span>
-          <span class="tag">Digital Transformation</span>
-        </div>
+<div class="topbar"></div>
+<header class="hero">
+  <div class="hero-bg-circle c1"></div>
+  <div class="hero-bg-circle c2"></div>
+  <div class="hero-inner">
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="data:image/jpeg;base64,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" alt="Akshay Joshi" />
+    </div>
+    <div class="hero-text">
+      <div class="hero-eyebrow">Client Partner · Technology Services</div>
+      <h1 class="hero-name">Akshay Joshi</h1>
+      <p class="hero-title">Tata Consultancy Services &nbsp;·&nbsp; New York, USA</p>
+      <p class="hero-bio">Strategic Client Partner with 17+ years of global experience in Business Development, Digital Transformation, and CXO-level Relationship Management. Proven track record managing multimillion-dollar portfolios across BFSI, Hi-Tech, Utilities, CPG, and Media &amp; Entertainment in North America, South Africa, and India.</p>
+      <div class="hero-pills">
+        <span class="pill">CXO Engagement</span>
+        <span class="pill">Business Development</span>
+        <span class="pill">Strategic Outsourcing</span>
+        <span class="pill">P&amp;L Ownership</span>
+        <span class="pill">Digital Transformation</span>
+        <span class="pill">Program Governance</span>
       </div>
-      <div class="hero-contact">
-        <a href="mailto:akshayjoshi86@gmail.com" class="contact-item">
-          <span class="contact-icon">✉</span> akshayjoshi86@gmail.com
-        </a>
-        <a href="tel:+17328958607" class="contact-item">
-          <span class="contact-icon">☎</span> +1 732 895 8607
-        </a>
-        <a href="https://www.linkedin.com/in/akshay-joshi-67917812/" class="contact-item" target="_blank" rel="noopener">
-          <span class="contact-icon">in</span> LinkedIn
-        </a>
+      <div class="hero-contacts">
+        <a href="mailto:akshayjoshi86@gmail.com" class="hc-link"><span class="hc-icon">✉</span> akshayjoshi86@gmail.com</a>
+        <a href="tel:+17328958607" class="hc-link"><span class="hc-icon">☎</span> +1 732 895 8607</a>
+        <a href="https://www.linkedin.com/in/akshay-joshi-67917812/" class="hc-link" target="_blank" rel="noopener"><span class="hc-icon">in</span> LinkedIn</a>
       </div>
     </div>
-  </header>
-
-  <!-- ── MAIN ── -->
-  <div class="main">
-
-    <!-- LEFT COLUMN -->
-    <div class="content">
-
-      <!-- EXPERIENCE -->
-      <section class="section">
-        <div class="section-label">Career History</div>
-        <h2 class="section-title">Professional Experience</h2>
-
-        <!-- TCS Current -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <div class="exp-role">Client Partner — Media &amp; Entertainment</div>
-            <div class="exp-date">2023 – Present</div>
-          </div>
-          <div class="exp-company">Tata Consultancy Services · United States</div>
+  </div>
+</header>
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">17+</div><div class="stat-label">Years Experience</div></div>
+    <div class="stat-item"><div class="stat-num">$50M</div><div class="stat-label">Pipeline Built</div></div>
+    <div class="stat-item"><div class="stat-num">$10.5M</div><div class="stat-label">TCV in Q3 FY23</div></div>
+    <div class="stat-item"><div class="stat-num">200+</div><div class="stat-label">Team Members Led</div></div>
+  </div>
+</div>
+<div class="main">
+  <div>
+    <section style="margin-bottom:52px;">
+      <div class="sec-label">Career History</div>
+      <h2 class="sec-title">Professional Experience</h2>
+      <div class="exp-item">
+        <div class="exp-line"></div>
+        <div>
+          <div class="exp-top"><div class="exp-role">Client Partner — Media &amp; Entertainment</div><div class="exp-date">2023 – Present</div></div>
+          <div class="exp-company">TATA CONSULTANCY SERVICES · UNITED STATES</div>
           <ul class="exp-bullets">
-            <li>Manage one of TCS's largest Media &amp; Entertainment customers in the Eastern US, holding full P&amp;L responsibility across Digital Engineering, Cloud Transformation, and Enterprise Platforms.</li>
-            <li>Created a qualified sales pipeline of $50M within the first 15 months; opened a new $5M TCV revenue stream in Enterprise Platforms within year one.</li>
-            <li>Lead Monthly Governance and Quarterly SteerCo reviews with CTO, CIO, EVP, and Business Unit Heads; orchestrate TCS PacePort™ innovation workshops and senior leadership sessions.</li>
+            <li>Manage one of TCS's largest M&amp;E customers in the Eastern US with full P&amp;L responsibility across Digital Engineering, Cloud, and Enterprise Platforms.</li>
+            <li>Built a qualified sales pipeline of $50M within the first 15 months; opened a new $5M TCV revenue stream in Enterprise Platforms in year one.</li>
+            <li>Lead Monthly Governance and Quarterly SteerCo with CTO, CIO, EVP and Business Unit Heads; orchestrate TCS PacePort™ innovation workshops.</li>
           </ul>
         </div>
-        <div class="exp-divider"></div>
-
-        <!-- TCS 2015–2023 -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <div class="exp-role">Client Partner — Multi-Geo Portfolio</div>
-            <div class="exp-date">2015 – 2023</div>
-          </div>
-          <div class="exp-company">Tata Consultancy Services · India | South Africa | Canada</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-line"></div>
+        <div>
+          <div class="exp-top"><div class="exp-role">Client Partner — Multi-Geo Portfolio</div><div class="exp-date">2015 – 2023</div></div>
+          <div class="exp-company">TATA CONSULTANCY SERVICES · INDIA | SOUTH AFRICA | CANADA</div>
           <ul class="exp-bullets">
-            <li>Managed strategic accounts including NBCUniversal, Adobe, Nedbank, McCain Foods, and London Hydro, leading 80–200-member global delivery teams.</li>
+            <li>Managed strategic accounts including NBCUniversal, Adobe, Nedbank, McCain Foods, and London Hydro, leading 80–200 member global delivery teams.</li>
             <li>Won Category-A new logo (McCain Foods) within 6 months; delivered $10.5M TCV in Q3 FY23 — highest in the region for a newly formed business unit.</li>
             <li>Closed a $1M Analytics deal at Adobe, enabling expansion of the Analytics business unit and a long-term revenue stream.</li>
           </ul>
         </div>
-        <div class="exp-divider"></div>
-
-        <!-- Tech Mahindra -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <div class="exp-role">Sr. Business Development Manager</div>
-            <div class="exp-date">2013 – 2015</div>
-          </div>
-          <div class="exp-company">Tech Mahindra · North America</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-line"></div>
+        <div>
+          <div class="exp-top"><div class="exp-role">Sr. Business Development Manager</div><div class="exp-date">2013 – 2015</div></div>
+          <div class="exp-company">TECH MAHINDRA · NORTH AMERICA</div>
           <ul class="exp-bullets">
-            <li>Opened 3 new Technology Captive logos within 18 months, significantly expanding the NA software, cloud, and product engineering footprint.</li>
-            <li>Closed $350K in new business in the first six months; developed and executed Account Strategic Plans (ASPs) across targeted engineering groups.</li>
+            <li>Opened 3 new Technology Captive logos within 18 months, expanding the NA software, cloud, and product engineering footprint.</li>
+            <li>Closed $350K in new business in the first six months; developed and executed Account Strategic Plans across targeted engineering groups.</li>
           </ul>
         </div>
-        <div class="exp-divider"></div>
-
-        <!-- Symphony Teleca -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <div class="exp-role">Business Development Executive</div>
-            <div class="exp-date">2009 – 2013</div>
-          </div>
-          <div class="exp-company">Symphony Teleca (now Harman) · United States</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-line"></div>
+        <div>
+          <div class="exp-top"><div class="exp-role">Business Development Executive</div><div class="exp-date">2009 – 2013</div></div>
+          <div class="exp-company">SYMPHONY TELECA (NOW HARMAN) · UNITED STATES</div>
           <ul class="exp-bullets">
-            <li>Acquired 4 new logos in 2012 across BFSI, Healthcare, Energy, and Engineering Services; awarded MVP and "You Made the Difference" for outstanding sales performance.</li>
-            <li>Led end-to-end campaign management and built CXO-level relationships across targeted accounts, driving $30M+ in new contracts.</li>
+            <li>Acquired 4 new logos in 2012 across BFSI, Healthcare, Energy, and Engineering Services; awarded MVP and "You Made the Difference".</li>
+            <li>Built CXO-level relationships across targeted accounts, driving $30M+ in new contracts through end-to-end campaign management.</li>
           </ul>
         </div>
-      </section>
-
-      <!-- HIGHLIGHTS -->
-      <section class="section">
-        <div class="section-label">Impact</div>
-        <h2 class="section-title">Key Achievements</h2>
-        <div class="highlights-grid">
-          <div class="highlight-card">
-            <div class="highlight-stat">$50M</div>
-            <div class="highlight-desc">Qualified pipeline built within 15 months at a leading US Media &amp; Entertainment account</div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-stat">$10.5M</div>
-            <div class="highlight-desc">TCV delivered in Q3 FY23 — highest in the region for a newly formed business unit</div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-stat">$5M</div>
-            <div class="highlight-desc">New TCV revenue stream opened in Enterprise Platforms within year one</div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-stat">17+ yrs</div>
-            <div class="highlight-desc">Global experience across BFSI, Hi-Tech, Utilities, CPG, and Media &amp; Entertainment</div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-stat">4 Logos</div>
-            <div class="highlight-desc">New customer logos acquired at Symphony Teleca in 2012; awarded MVP recognition</div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-stat">200+</div>
-            <div class="highlight-desc">Member global delivery teams led across Cloud, Data, Cybersecurity, and Digital Engineering</div>
-          </div>
-        </div>
-      </section>
-
-    </div><!-- /content -->
-
-    <!-- RIGHT SIDEBAR -->
-    <aside class="sidebar">
-
-      <!-- SKILLS -->
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">Core Skills</h3>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Business &amp; Sales</div>
-          <div class="skill-chips">
-            <span class="skill-chip">Business Development</span>
-            <span class="skill-chip">Account Management</span>
-            <span class="skill-chip">New Logo Acquisition</span>
-            <span class="skill-chip">Large Deal Pursuits</span>
-            <span class="skill-chip">P&amp;L Ownership</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Technology &amp; Transformation</div>
-          <div class="skill-chips">
-            <span class="skill-chip">Cloud Modernization</span>
-            <span class="skill-chip">Digital Transformation</span>
-            <span class="skill-chip">AI/ML Platforms</span>
-            <span class="skill-chip">Data &amp; Analytics</span>
-            <span class="skill-chip">Agile / DevOps</span>
-            <span class="skill-chip">SAP</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Leadership &amp; Delivery</div>
-          <div class="skill-chips">
-            <span class="skill-chip">CXO Engagement</span>
-            <span class="skill-chip">Strategic Outsourcing</span>
-            <span class="skill-chip">Program Governance</span>
-            <span class="skill-chip">SteerCo Leadership</span>
-            <span class="skill-chip">People Leadership</span>
-          </div>
-        </div>
       </div>
-
-      <!-- CERTIFICATIONS -->
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">Education &amp; Certifications</h3>
-        <ul class="cert-list">
-          <li>B.E. Computer Science — Rajasthan University</li>
-          <li>Professional Scrum Master II (PSM II) — Scrum.org</li>
-          <li>TCS Ambassador Corps — Global Sales Training</li>
-          <li>ITIL Foundation</li>
-          <li>Agile Way of Working</li>
-          <li>Cloud Computing Foundation</li>
-          <li>Data Analytics Foundation</li>
-        </ul>
+    </section>
+    <section>
+      <div class="sec-label">Impact</div>
+      <h2 class="sec-title">Key Achievements</h2>
+      <div class="achieve-grid">
+        <div class="achieve-card"><div class="achieve-stat">$50M</div><div class="achieve-desc">Qualified pipeline built within 15 months at a leading US Media &amp; Entertainment account</div></div>
+        <div class="achieve-card"><div class="achieve-stat">$10.5M</div><div class="achieve-desc">TCV delivered in Q3 FY23 — highest in the region for a newly formed business unit</div></div>
+        <div class="achieve-card"><div class="achieve-stat">$5M</div><div class="achieve-desc">New TCV revenue stream opened in Enterprise Platforms within year one</div></div>
+        <div class="achieve-card"><div class="achieve-stat">4 Logos</div><div class="achieve-desc">New customer logos acquired at Symphony Teleca in 2012; awarded MVP recognition</div></div>
+        <div class="achieve-card"><div class="achieve-stat">3 Logos</div><div class="achieve-desc">New Technology Captive logos opened at Tech Mahindra within 18 months</div></div>
+        <div class="achieve-card"><div class="achieve-stat">200+</div><div class="achieve-desc">Member global delivery teams led across Cloud, Data, Cybersecurity, and Digital Engineering</div></div>
       </div>
-
-      <!-- REGIONS -->
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">Regional Experience</h3>
-        <div class="region-pills">
-          <span class="region-pill">🇺🇸 United States</span>
-          <span class="region-pill">🇨🇦 Canada</span>
-          <span class="region-pill">🇿🇦 South Africa</span>
-          <span class="region-pill">🇮🇳 India</span>
-        </div>
+    </section>
+  </div>
+  <aside>
+    <div class="sidebar-sec">
+      <h3 class="sb-title">Core Skills</h3>
+      <div class="skill-group">
+        <div class="skill-group-label">Business &amp; Sales</div>
+        <div class="chips"><span class="chip">Business Development</span><span class="chip">Account Management</span><span class="chip">New Logo Acquisition</span><span class="chip">Large Deal Pursuits</span><span class="chip">P&amp;L Ownership</span></div>
       </div>
-
-      <!-- LINKS -->
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">Connect</h3>
-        <div class="link-list">
-          <a href="mailto:akshayjoshi86@gmail.com" class="link-btn">
-            <span>✉</span> akshayjoshi86@gmail.com
-          </a>
-          <a href="tel:+17328958607" class="link-btn">
-            <span>☎</span> +1 732 895 8607
-          </a>
-          <a href="https://www.linkedin.com/in/akshay-joshi-67917812/" class="link-btn" target="_blank" rel="noopener">
-            <span>🔗</span> LinkedIn Profile
-          </a>
-        </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Technology</div>
+        <div class="chips"><span class="chip">Cloud Modernization</span><span class="chip">Digital Transformation</span><span class="chip">AI / ML</span><span class="chip">Data &amp; Analytics</span><span class="chip">Agile / DevOps</span><span class="chip">SAP</span></div>
       </div>
-
-    </aside>
-  </div><!-- /main -->
-
-  <footer>
-    &copy; 2026 Akshay Joshi &nbsp;·&nbsp; <a href="mailto:akshayjoshi86@gmail.com">akshayjoshi86@gmail.com</a>
-  </footer>
-
+      <div class="skill-group">
+        <div class="skill-group-label">Leadership</div>
+        <div class="chips"><span class="chip">CXO Engagement</span><span class="chip">SteerCo Leadership</span><span class="chip">Program Governance</span><span class="chip">Strategic Outsourcing</span><span class="chip">People Leadership</span></div>
+      </div>
+    </div>
+    <div class="sidebar-sec">
+      <h3 class="sb-title">Education &amp; Certifications</h3>
+      <ul class="cert-list">
+        <li>B.E. Computer Science — Rajasthan University</li>
+        <li>Professional Scrum Master II (PSM II)</li>
+        <li>TCS Ambassador Corps — Global Sales</li>
+        <li>ITIL Foundation</li>
+        <li>Agile Way of Working</li>
+        <li>Cloud Computing Foundation</li>
+        <li>Data Analytics Foundation</li>
+      </ul>
+    </div>
+    <div class="sidebar-sec">
+      <h3 class="sb-title">Regional Experience</h3>
+      <div class="regions">
+        <span class="region">🇺🇸 United States</span>
+        <span class="region">🇨🇦 Canada</span>
+        <span class="region">🇿🇦 South Africa</span>
+        <span class="region">🇮🇳 India</span>
+      </div>
+    </div>
+    <div class="sidebar-sec">
+      <h3 class="sb-title">Connect</h3>
+      <div class="link-list">
+        <a href="mailto:akshayjoshi86@gmail.com" class="link-btn"><span>✉</span> akshayjoshi86@gmail.com</a>
+        <a href="tel:+17328958607" class="link-btn"><span>☎</span> +1 732 895 8607</a>
+        <a href="https://www.linkedin.com/in/akshay-joshi-67917812/" class="link-btn" target="_blank" rel="noopener"><span>🔗</span> LinkedIn Profile</a>
+      </div>
+    </div>
+  </aside>
+</div>
+<footer>&copy; 2026 Akshay Joshi &nbsp;·&nbsp; <a href="mailto:akshayjoshi86@gmail.com">akshayjoshi86@gmail.com</a></footer>
 </body>
 </html>
